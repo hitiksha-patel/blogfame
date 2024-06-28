@@ -1,0 +1,48 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+
+
+{% block title %}
+    Registration
+{% endblock title %}
+    
+
+{% block body %}
+<section class="section pt-55 mb-50">
+    <div class="container-fluid">
+        <div class="sign widget">
+            <div class="section-title">
+                <h5>Sign up</h5>
+            </div>
+            {{form.errors}}
+        
+            <form class="sign-form widget-form" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{form.first_name}}
+                </div>
+                <div class="form-group">
+                    {{form.last_name}}
+                </div>
+                <div class="form-group">
+                    {{form.username}}
+                </div>
+                <div class="form-group">
+                    {{form.email}}
+                </div>
+                <div class="form-group">
+                    {{form.password}}
+                </div>
+                <div class="form-group">
+                    <label > Profile Picture</label>
+                    {{form.profile}}
+                </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn-custom">Sign Up</button>
+                    </div>
+                        <p class="form-group text-center">Already have an account? 
+                            <a href="{% url 'accounts:user_login' %}" class="btn-link">Login</a> </p>
+            </form>
+
+{% endblock body %}
+    

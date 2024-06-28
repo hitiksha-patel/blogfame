@@ -1,0 +1,35 @@
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.form-dropdown {
+    width: 100%;
+    border: 1px solid #eee;
+    background-color: #F9F9FF;
+    border-radius: 20px;
+    padding: 15px 20px;
+    font-size: 14px;
+    color: #152035;
+    display: inline-block;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-side > a {
+    padding:10px;
+    font-size: 20px;
+}
+.right-side > a:hover {
+    color: #f67280;
+    font-size:25px;
+}
+
+

@@ -1,0 +1,57 @@
+{% extends 'blogs/base.html' %}
+{% load static %}
+
+
+{% block title %}
+    My Profile
+{% endblock title %}
+    
+
+{% block body %}
+<section class="section pt-55 mb-50">
+    <div class="container-fluid">
+        <div class="sign widget">
+            <div class="section-title">
+                <h5>{{user.get_full_name}}</h5>
+           
+                    <img src={{user.profile.url}} alt="">
+               
+                <div class="form-group">
+                    <div class="form-group">
+                        <input type="email" class="form-control"  name="email" value="{{user.first_name}}" readonly>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group">
+                        <input type="email" class="form-control"  name="email" value="{{user.last_name}}" readonly>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group">
+                        <input type="email" class="form-control"  name="email" value="{{user.username}}" readonly>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group">
+                        <input type="email" class="form-control"  name="email" value="{{user.email}}" readonly>
+                    </div>
+                    
+                </div>
+                
+              
+                    <div class="form-group">
+                        <button type="submit" class="btn-custom">Sign Up</button>
+                    </div>
+
+                
+
+                    <a  href="{% url 'blogs:change_user_password' %}">Change Password</a>
+                    <a  href="{% url 'blogs:update_profile' %}">Update Profile</a>
+            </div>
+            
+            
+        
+           
+
+{% endblock body %}
+    

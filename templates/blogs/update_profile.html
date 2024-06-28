@@ -1,0 +1,20 @@
+{% extends 'blogs/base.html' %}
+
+
+{% block title %}
+    update profile
+{% endblock title %}
+    
+
+{% block body %}
+<div class="container">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {{form.as_p}}
+
+        <button type="submit" class="btn btn-warning">Update</button>
+    </form>
+</div>
+{% endblock body %}
+    

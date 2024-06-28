@@ -1,0 +1,20 @@
+# Ignore Python bytecode files
+*.pyc
+__pycache__/
+
+# Ignore environment-specific settings
+.env
+
+# Ignore IDE files (example entries for VS Code and PyCharm)
+.vscode/
+.idea/
+
+# Ignore local development settings (example for Django)
+/venv/
+../venv/
+# /static/
+# /media/
+
+# Ignore logs and database files
+/logs/
+db.sqlite3

@@ -1,0 +1,51 @@
+{% extends 'blogs/base.html' %}
+
+
+{% block title %}
+    detail
+{% endblock title %}
+    
+
+{% block body %}
+<section class="section pt-55 ">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-lg-12 mb-20">
+              <!--Post-single-->
+              <div class="post-single">
+                  <div class="post-single-image">
+                      <img src="{{details.picture.url}}" alt="">
+                  </div>
+                  <div class="post-single-content">
+                      <a class="categorie" style="color:white">{{details.blog_type}}</a> 
+                      <h4>{{details.title}}</h4>
+                      <div class="post-single-info">
+                          <ul class="list-inline">
+                              <li><a href="author.html"><img src="{{details.user.profile.url}}" alt=""></a></li>
+                              <li><a href="author.html">{{details.user.get_full_name}}</a> </li>
+                              <li class="dot"></li>
+                              <li>{{details.date}}</li>
+                             
+                              
+                          </ul>
+                      </div>
+                  </div>
+            
+                  <div class="post-single-body">
+                      <p>
+                        {{details.description}}
+                      </p>
+ 
+              <!--/-->
+          </div> 
+      </div>
+  </div>
+</section><!--/-->
+
+
+
+
+
+
+{% endblock body %}
+    

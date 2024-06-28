@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- favicon -->
+    <link rel="icon" sizes="16x16" href="{% static 'assets/img/favicon.png' %}">
+
+    <!-- Title -->
+    <title> 
+    {% block title %}
+        
+    {% endblock title %}
+         </title>
+
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
+
+    <!-- CSS Plugins -->
+    <link rel="stylesheet" href="{% static 'assets/css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/elegant-font-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.css' %}">
+    <!-- main style -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
+</head>
+
+<body>
+    <!--loading -->
+    <div class="loading">
+        <div class="circle"></div>
+    </div>
+    <!--/-->
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <!--logo-->
+            <div class="logo">
+                <a href="{% url 'blogs:index' %}">
+                    <img src="{% static 'assets/img/logo-dark.png' %}" alt="" class="logo-dark">
+                    <img src="{% static 'assets/img/logo-white.png' %}" alt="" class="logo-white">
+                </a>
+            </div>
+            <!--/-->
+    
+            <!--navbar-collapse-->
+            <div class="collapse navbar-collapse" id="main_nav">
+                <ul class="navbar-nav ml-auto mr-auto">
+                     <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'blogs:index' %}"> Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'blogs:create_blog' %}"> Add Blog </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'blogs:show_blog' %}">All Blogs </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'blogs:my_blogs' %}"> My Blogs </a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Contact Us</a>
+                    </li>
+                   
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" data-toggle="dropdown">Hello, {{request.user.get_full_name}}</a>
+                        <ul class="dropdown-menu fade-up">
+                            <li>
+                                <a class="dropdown-item" href="{% url 'blogs:my_profile' %}">My Profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{% url 'accounts:user_logout' %}">Logout </a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    
+                   
+
+                </ul>
+            </div>
+            <!--/-->
+    
+            <!--navbar-right-->
+           
+
+            <div class="navbar-right ml-auto">
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            </div>
+        </div>
+        
+    </nav>
+    <!--/-->
+
+
+{% block body %}
+    
+{% endblock body %}
+    
+
+
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="{% static 'assets/js/jquery-3.5.0.min.js' %}"></script>
+        <script src="{% static 'assets/js/popper.min.js' %}"></script>
+        <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    
+        <!-- JS Plugins  -->
+        <script src="{% static 'assets/js/ajax-contact.js' %}"></script>
+        <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'assets/js/switch.js' %}"></script>
+        
+        <!-- JS main  -->
+        <script src="{% static 'assets/js/main.js' %}"></script>
+    
+    
+    </body>
+    
+    
+    <!-- Mirrored from noonpost.netlify.app/html/template/index-6.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Aug 2021 10:04:24 GMT -->
+    </html>
