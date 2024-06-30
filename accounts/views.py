@@ -22,6 +22,7 @@ def user_register(request):
             user.set_password(user.password)
             token = str(uuid.uuid4())
             user.email_token = token
+            user.is_verified = True
             user.save()
             send_verify_mail(user.email, token)
             messages.success(request, "Please check your email and verify your account to login!")

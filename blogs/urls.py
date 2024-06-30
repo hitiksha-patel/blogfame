@@ -14,7 +14,4 @@ urlpatterns = [
     path('my_profile',views.my_profile, name = 'my_profile' ),
     path('change_user_password',views.change_user_password, name = 'change_user_password' ),
     path('update_profile',views.update_profile, name = 'update_profile' ),
-
-
-        
 ]

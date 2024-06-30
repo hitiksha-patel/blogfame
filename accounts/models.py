@@ -14,9 +14,8 @@ class User(AbstractUser):
 
     objects = UserManager()
 
-    # Define unique related names to avoid clashes with auth.User's default related names
-    groups = models.ManyToManyField(Group, related_name='user_set_custom')  # Use a unique related_name
-    user_permissions = models.ManyToManyField(Permission, related_name='user_set_custom')  # Use a unique related_name
+    groups = models.ManyToManyField(Group, related_name='user_set_custom')
+    user_permissions = models.ManyToManyField(Permission, related_name='user_set_custom')
 
     def __str__(self):
         return self.email
